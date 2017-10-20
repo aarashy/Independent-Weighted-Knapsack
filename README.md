@@ -5,15 +5,15 @@ The context for the problem is we enter a store with N items, where every item h
 
 We have constraints. We have a budget of M; the sum of the costs of our chosen items can't exceed M. We have a carrying capacity P; every item has a weight and the sum of weights mustn't exceed P. Finally, we have C different constraint classes, which are C different lists of elements such that we can't simultaneously select multiple items from the same constraint class. One item may be in arbitrarily many constraint classes.
 
-Input :
-
+## Input :
 N items (which all have a weight, cost, and resale value).
 P: Our maximum weight-carrying-capacity,
 M: Our maximum budget,
 C: The number of different constraint classes
 And a list of the constraints. Each constraint is a set of elements that cannot be selected concurrently.
-Output :
 
+
+## Output :
 The list of items that maximizes profit given the constraints.
 
 ## Main Idea:

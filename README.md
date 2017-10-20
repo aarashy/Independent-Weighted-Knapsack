@@ -1,4 +1,21 @@
 # Independent-Weighted-Knapsack
+This function approximates the best possible combination of items to purchase and resell in the NP-hard problem Independent Weighted Knapsack, which is a combination of Weighted Knapsack and Independent Set.
+
+The context for the problem is we enter a store with N items, where every item has a cost and resale value. The objective is to choose a list of items maximize our profit, which is defined as the sum of the resale values minus the sum of the costs.
+
+We have constraints. We have a budget of M; the sum of the costs of our chosen items can't exceed M. We have a carrying capacity P; every item has a weight and the sum of weights mustn't exceed P. Finally, we have C different constraint classes, which are C different lists of elements such that we can't simultaneously select multiple items from the same constraint class. One item may be in arbitrarily many constraint classes.
+
+Input :
+
+N items (which all have a weight, cost, and resale value).
+P: Our maximum weight-carrying-capacity,
+M: Our maximum budget,
+C: The number of different constraint classes
+And a list of the constraints. Each constraint is a set of elements that cannot be selected concurrently.
+Output :
+
+The list of items that maximizes profit given the constraints.
+
 ## Main Idea:
 I implemented a relatively straightforward greedy algorithm that does one pass through the items. Starting with the item of highest profit, which we define as resale value minus cost, and in descending order by profit, we try to add all good looking items into our sack. I used Python’s simple multiprocessing library to parallelize threads on my machine.
 ## More Detail:
